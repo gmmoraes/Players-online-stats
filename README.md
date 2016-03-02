@@ -28,6 +28,8 @@ Python Version: 3.4.3
 5) Install cairocffi
 
     $sudo pip install cairocffi
+    
+6) Download statstibia.py and test2.db
 
 
 
