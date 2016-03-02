@@ -16,14 +16,19 @@ Ubuntu:
 apt-get -y install python-pip
 
 
+
 Numpy
+
 sudo pip install numpy
 
 Bealtifulsoup
+
 pip install beautifulsoup4
 
 Matplotlib
+
 pip install matplotlib
 
 cairocffi
+
 pip install cairocffi
