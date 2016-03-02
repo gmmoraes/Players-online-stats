@@ -6,29 +6,36 @@ This program gets the Online players information from the official game website 
 
 
 ##Instalation
+-----------------------------
+Python Version: 3.4.3
 
-Python version: 3.4.3
+1) Install pip::
 
-Pip
+    $sudo apt-get -y install python-pip
 
-Ubuntu:
+2) Install Numpy::
 
-apt-get -y install python-pip
+    $sudo pip install numpy
+
+3) Install Bealtifulsoup::
+
+  ``` $sudo pip install beautifulsoup4 ```
+
+4) Install Matplotlib::
+
+    $sudo pip install matplotlib
+
+5) Install cairocffi::
+
+    $sudo pip install cairocffi
 
 
 
-Numpy
 
-sudo pip install numpy
 
-Bealtifulsoup
 
-pip install beautifulsoup4
 
-Matplotlib
 
-pip install matplotlib
 
-cairocffi
 
-pip install cairocffi
+ 
