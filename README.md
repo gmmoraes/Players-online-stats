@@ -9,23 +9,23 @@ This program gets the Online players information from the official game website 
 -----------------------------
 Python Version: 3.4.3
 
-1) Install pip::
+1) Install pip
 
     $sudo apt-get -y install python-pip
 
-2) Install Numpy::
+2) Install Numpy
 
     $sudo pip install numpy
 
-3) Install Bealtifulsoup::
+3) Install Bealtifulsoup
 
   ``` $sudo pip install beautifulsoup4 ```
 
-4) Install Matplotlib::
+4) Install Matplotlib
 
     $sudo pip install matplotlib
 
-5) Install cairocffi::
+5) Install cairocffi
 
     $sudo pip install cairocffi
 
