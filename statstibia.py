@@ -85,20 +85,17 @@ class Stats():
             percentChanges = "The Number of Players has raised " + str(percent) + "%"
 
 
-        #Creates suplot and Graphs
-        fig, ax = plt.subplots() #ver porque precisa de fig
+        fig, ax = plt.subplots() 
         plt.title(percentChanges)
         ax.bar(int_datesLow,low, label="Minimum number of players", color="red")
         ax.bar(int_datesHigh, high, label="Maximum number of players")
 
         
-        #format date strings on xaxis:
-        locator = AutoDateLocator()#esses codigos localizam e formatam o codigo de unix para data
+        locator = AutoDateLocator()
         ax.xaxis.set_major_locator(locator)
         ax.xaxis.set_major_formatter( AutoDateFormatter(locator) ) 
 
-        #adjust x limits and apply autoformatter fordisplay of dates
-        #obs como estou com duas barras nao precisa desses
+        
         if int(yearHigh) > int(yearLow) or int(yearHigh) == int(yearLow) and int(monthHigh) > int(monthLow) or int(yearHigh) == int(yearLow) and int(monthHigh) == int(monthLow) and int(dayHigh) > int(dayLow):
             if int(dayHigh) < 30 and int(dayLow) > 1 and int(monthHigh) != 2:
                 dayLow = str(int(dayLow) - 1)
