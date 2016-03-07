@@ -124,16 +124,6 @@ class Stats():
 
         ax.set_xlim([min_date, max_date])
         fig.autofmt_xdate()
-            
-
-            
-        '''
-        min_date = date2num( datetime.datetime.strptime('2016-02-16', '%Y-%m-%d') )
-        max_date = date2num( datetime.datetime.strptime('2016-03-01', '%Y-%m-%d') )
-        ax.set_xlim([min_date, max_date])
-        fig.autofmt_xdate()
-        '''
-
         plt.legend()
         plt.show()
         
@@ -150,7 +140,6 @@ class Stats():
 
         
 
-        #datePlayer = self.c.execute('SELECT DISTINCT date FROM tibiaDB ORDER BY number ASC')
         datePlayer = self.c.execute('SELECT date FROM tibiaDB')
         values2 = []
         i = 0
@@ -165,13 +154,12 @@ class Stats():
          
 
 
-        #Creates suplot and Graphs
-        fig, ax = plt.subplots() #ver porque precisa de fig
+        fig, ax = plt.subplots() 
         ax.plot(values2,values, label="Minimum number of players", color="red")
         plt.title('Tibia Players Online')
         plt.ylabel('Number of players')
         plt.xlabel('Dates')
-        locator = AutoDateLocator()#esses codigos localizam e formatam o codigo de unix para data
+        locator = AutoDateLocator()
         ax.xaxis.set_major_locator(locator)
         ax.xaxis.set_major_formatter( AutoDateFormatter(locator) )
         fig.autofmt_xdate()
@@ -210,6 +198,5 @@ class tkinter():
 
 tkinter()
 Stats()
-#entender os codigos no def comparison
-# ver se da pra fazer algo com time2num no def comparison
+
 
