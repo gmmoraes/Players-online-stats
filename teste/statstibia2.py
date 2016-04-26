@@ -1,13 +1,12 @@
-from bs4 import BeautifulSoup
-import urllib.request
 import sqlite3
-from matplotlib import pyplot as plt
-from cairocffi import *
-from tkinter import*
 import time
 import datetime
 import numpy as np
+import urllib.request
+from bs4 import BeautifulSoup
+from matplotlib import pyplot as plt
 from matplotlib.dates import AutoDateLocator, AutoDateFormatter, date2num
+from tkinter import*
 plt.style.use('ggplot')
 
 
@@ -60,12 +59,12 @@ class DataStore():
 
 
 
-class tkinter():
+class GuiWindow():
     def __init__(self):
         root = Tk()
         frames = Frame(root)
         frames.pack()
-        playersOnline = Button(frames, text="Players online list", fg="blue", command = self.graphPlayers)
+        playersOnline = Button(frames, text="Players online list", fg="blue", command = self.graph_players)
         changes = Button(frames, text="Changes in max and min values", fg="blue", command = self.comparison)
         playersOnline.pack(side=LEFT)
         changes.pack(side=LEFT)
@@ -159,7 +158,7 @@ class tkinter():
         plt.show()
 
 
-    def graphPlayers(self):
+    def graph_players(self):
         with sqlite3.connect('test2.db') as db:
             cursor = db.cursor()
         numberPlayer = cursor.execute('SELECT number FROM tibiaDB')
@@ -207,4 +206,4 @@ class tkinter():
 
 
 #DataStore()
-tkinter()
+GuiWindow()
